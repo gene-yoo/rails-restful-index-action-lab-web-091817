@@ -188,3 +188,17 @@ Processing by StudentsController#students as HTML
   [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students" WHERE ("students"."first_name" IS NOT NULL)
   Rendered students/students.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-10-14 19:08:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2017-10-14 19:08:17 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE ("students"."first_name" IS NOT NULL)
+  Rendered students/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 214ms (Views: 207.5ms | ActiveRecord: 0.5ms)

@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  def students
+  def index
     @students = Student.where.not(first_name: nil)
   end
 end
