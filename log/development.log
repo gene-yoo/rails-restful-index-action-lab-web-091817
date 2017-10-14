@@ -38,3 +38,153 @@ Started GET "/" for ::1 at 2015-11-18 13:37:10 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-14 18:53:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 23ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2017-10-14 18:53:47 -0400
+Processing by StudentsController#students as HTML
+  Rendered students/students.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1939ms (Views: 1938.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-10-14 18:53:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2017-10-14 18:53:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2017-10-14 18:53:49 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2017-10-14 18:53:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-10-14 18:53:49 -0400
+
+
+Started GET "/students" for ::1 at 2017-10-14 18:56:54 -0400
+Processing by StudentsController#students as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/students.html.erb within layouts/application (35.3ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    2: 
+    3: <ul>
+    4:   <% @students.each do |student| %>
+    5:   <li><%= student.to_s %></li>
+    6:   <% end %>
+    7: </ul>
+  app/models/student.rb:3:in `to_s'
+  app/views/students/students.html.erb:5:in `block in _app_views_students_students_html_erb__789589398806319652_70127552303720'
+  app/views/students/students.html.erb:4:in `_app_views_students_students_html_erb__789589398806319652_70127552303720'
+
+
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.5ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (58.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (129.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/students" for ::1 at 2017-10-14 18:57:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#students as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/students.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    2: 
+    3: <ul>
+    4:   <% @students.each do |student| %>
+    5:   <li><%= student.to_s %></li>
+    6:   <% end %>
+    7: </ul>
+  app/models/student.rb:3:in `to_s'
+  app/views/students/students.html.erb:5:in `block in _app_views_students_students_html_erb___1440233799695388752_70097253198500'
+  app/views/students/students.html.erb:4:in `_app_views_students_students_html_erb___1440233799695388752_70097253198500'
+
+
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.0ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (117.1ms)
+  [1m[36mStudent Load (1.7ms)[0m  [1mSELECT "students".* FROM "students"[0m
+
+
+Started GET "/" for ::1 at 2017-10-14 19:03:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 21ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2017-10-14 19:03:06 -0400
+Processing by StudentsController#students as HTML
+  [1m[35mStudent Load (0.9ms)[0m  SELECT "students".* FROM "students" WHERE ("students"."name" IS NOT NULL)
+SQLite3::SQLException: no such column: students.name: SELECT "students".* FROM "students" WHERE ("students"."name" IS NOT NULL)
+  Rendered students/students.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: students.name: SELECT "students".* FROM "students" WHERE ("students"."name" IS NOT NULL)):
+    1: <h1>Students Index Page</h1>
+    2: 
+    3: <ul>
+    4:   <% @students.each do |student| %>
+    5:   <li><%= student.to_s %></li>
+    6:   <% end %>
+    7: </ul>
+  app/views/students/students.html.erb:4:in `_app_views_students_students_html_erb__2793053531699311094_70320863448720'
+
+
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.2ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (56.1ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/geneyoo/.rvm/gems/ruby-2.3.5/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.7ms)
+
+
+Started GET "/students" for ::1 at 2017-10-14 19:03:49 -0400
+Processing by StudentsController#students as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT "students".* FROM "students" WHERE ("students"."first_name" IS NOT NULL)[0m
+  Rendered students/students.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 189ms (Views: 185.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for ::1 at 2017-10-14 19:03:52 -0400
+Processing by StudentsController#students as HTML
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students" WHERE ("students"."first_name" IS NOT NULL)
+  Rendered students/students.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.1ms)
